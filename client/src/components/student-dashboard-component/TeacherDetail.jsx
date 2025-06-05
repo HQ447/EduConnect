@@ -153,20 +153,32 @@ function TeacherDetail() {
       console.log("rating response :", res);
 
       // Update the local state with new rating
-      setCurrentRating(newRating);
-      setTeacher((prev) => ({ ...prev, rating: newRating }));
 
       alert("Thank you for your rating!");
     } catch (err) {
       console.error(err);
       alert("Error submitting rating");
     }
+
+    console.log("student Id", studentId);
+    //send rating for Recommendations
+    try {
+      await axios.post(
+        `${domain}/tutor/rateToRecommend`,
+        { studentId, teacherId: id, rating: newRating },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+    } catch (error) {
+      console.error("Failed to rate teacher", error);
+    }
   };
 
   useEffect(() => {
     fetchTeacher();
     fetchFeedbacks();
-  }, [id][feedbacks]);
+  }, [id]);
 
   if (!teacher)
     return (

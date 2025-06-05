@@ -45,6 +45,8 @@ import { sendFeedback } from "../controllers/student controller/sendFeedback.con
 import { getAllFeedbacks } from "../controllers/student controller/getAllFeedbacks.controller.js";
 import { teacherRating } from "../controllers/Rating/teacherRating.controller.js";
 import { getRatings } from "../controllers/Rating/getRatings.controller.js";
+import { rateTeacher } from "../controllers/Recommendation Controllers/rateTeacher.js";
+import { getRecommendations } from "../controllers/Recommendation Controllers/recommendationController.js";
 
 const router = express.Router();
 
@@ -119,6 +121,11 @@ router.delete("/removeNotification/:id", verifyToken, removeNotifications);
 router.post("/sendFeedback", verifyToken, sendFeedback);
 router.get("/getFeedback/:teacherId", verifyToken, getAllFeedbacks);
 
+//Rating for Recommendations
+router.post("/rateToRecommend", verifyToken, rateTeacher);
+router.get("/getRecommendations", verifyToken, getRecommendations);
+
+//Rating
 router.post("/rateTeacher/:teacherId", teacherRating);
 router.get("/ratings/:teacherId", getRatings);
 

@@ -41,7 +41,7 @@ function About() {
         <div className="lg:w-1/2 flex justify-center">
           <img
             className="w-full max-w-md rounded-2xl shadow-lg"
-            src="pic.png"
+            src="https://www.faulkner.edu/wp-content/uploads/Student-taking-online-class.jpg"
             alt="SkillSkout illustration"
           />
         </div>

@@ -113,8 +113,8 @@ function Navbar() {
             </a>
           </li>
           <li className="hover:text-emerald-400 transition-all duration-300 hover:scale-105 cursor-pointer">
-            <a href="#Work" className="relative group">
-              How It Works
+            <a href="#Top" className="relative group">
+              Top Picks
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-teal-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>

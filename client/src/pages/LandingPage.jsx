@@ -16,13 +16,12 @@ function LandingPage() {
     <div>
       <Navbar />
       <Home />
-      <Features />
       <Work />
+      <Features />
       <Categories />
-      <Teachers />
-      <Achivements />
+
       <About />
-      <FAQs />
+
       <Contact />
       <Footer />
     </div>

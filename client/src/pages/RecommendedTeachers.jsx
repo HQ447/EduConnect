@@ -3,7 +3,7 @@ import { MapPin, BookOpen, Clock, Star } from "lucide-react";
 
 const domain = "http://localhost:8000";
 
-const Work = () => {
+const RecommendedTeachers = () => {
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -108,7 +108,7 @@ const Work = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 id="Top" className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Recommended Teachers
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -215,6 +215,16 @@ const Work = () => {
                 </div>
               ))}
             </div>
+
+            {/* Back Button */}
+            <div className="text-center">
+              <button
+                onClick={handleBackToTeachers}
+                className="bg-white text-indigo-600 border border-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors font-medium shadow-md hover:shadow-lg"
+              >
+                Back to All Teachers
+              </button>
+            </div>
           </>
         )}
       </div>
@@ -222,4 +232,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default RecommendedTeachers;
