@@ -20,16 +20,8 @@ export const updatedAdminProfile = async (req, res) => {
 
     // Handle profile image upload
     if (req.file) {
-      // Delete old profile image if it exists
-      if (admin.img) {
-        const oldImagePath = path.join(process.cwd(), admin.img);
-        if (fs.existsSync(oldImagePath)) {
-          fs.unlinkSync(oldImagePath);
-        }
-      }
-
       // Set new image path
-      admin.img = `uploads/admins/${req.file.filename}`;
+      admin.img = req.file.path;
     }
 
     // Update basic info

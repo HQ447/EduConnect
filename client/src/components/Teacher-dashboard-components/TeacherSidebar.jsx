@@ -82,7 +82,7 @@ function TeacherSidebar() {
         });
 
         if (teacher.img) {
-          setImgPreview(`${domain}/${teacher.img}`);
+          setImgPreview(teacher.img);
         }
       } else {
         console.log("error in fetching teacher profile");

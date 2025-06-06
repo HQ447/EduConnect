@@ -241,7 +241,7 @@ function StudentManagement() {
                           <div className="flex-shrink-0">
                             {student?.img ? (
                               <img
-                                src={`${domain}/${student.img}`}
+                                src={student.img}
                                 alt={student.studentName}
                                 className="w-12 h-12 rounded-full object-cover ring-2 ring-blue-100 shadow-sm"
                               />

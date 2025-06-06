@@ -47,7 +47,7 @@ function Feedback() {
                     <div className="flex items-center gap-2">
                       {feedback?.studentImg && (
                         <img
-                          src={`${domain}/${feedback.studentImg}`}
+                          src={feedback.studentImg}
                           alt={feedback.studentName}
                           className="w-8 h-8 rounded-full object-cover ring-2 ring-blue-100 shadow-sm"
                         />

@@ -39,7 +39,7 @@ const StudentSettings = () => {
           });
 
           if (student.img) {
-            setImgPreview(`${domain}/${student.img}`);
+            setImgPreview(student.img);
           }
         } else {
           setMessage("Failed to fetch student profile");

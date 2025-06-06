@@ -20,16 +20,7 @@ export const updateStudentProfile = async (req, res) => {
 
     // Handle profile image upload
     if (req.file) {
-      // Delete old profile image if it exists
-      if (student.img) {
-        const oldImagePath = path.join(process.cwd(), student.img);
-        if (fs.existsSync(oldImagePath)) {
-          fs.unlinkSync(oldImagePath);
-        }
-      }
-
-      // Set new image path
-      student.img = `uploads/students/${req.file.filename}`;
+      student.img = req.file.path;
     }
 
     // Update basic info

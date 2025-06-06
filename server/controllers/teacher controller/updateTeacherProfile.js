@@ -37,16 +37,7 @@ export const updateTeacherProfile = async (req, res) => {
 
     // Handle profile image upload
     if (req.file) {
-      // Delete old profile image if it exists
-      if (teacher.img) {
-        const oldImagePath = path.join(process.cwd(), teacher.img);
-        if (fs.existsSync(oldImagePath)) {
-          fs.unlinkSync(oldImagePath);
-        }
-      }
-
-      // Set new image path
-      teacher.img = `uploads/teachers/${req.file.filename}`;
+      teacher.img = req.file.path;
     }
 
     // const reverseGeocode = async (lat, lng) => {

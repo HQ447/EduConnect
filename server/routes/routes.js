@@ -47,6 +47,9 @@ import { teacherRating } from "../controllers/Rating/teacherRating.controller.js
 import { getRatings } from "../controllers/Rating/getRatings.controller.js";
 import { rateTeacher } from "../controllers/Recommendation Controllers/rateTeacher.js";
 import { getRecommendations } from "../controllers/Recommendation Controllers/recommendationController.js";
+import studentCloudUploader from "../middlewares/studentCloudUploader.js";
+import teacherCloudUploader from "../middlewares/teacherCloudUploader.js";
+import adminCloudUploader from "../middlewares/adminCloudUploader.js";
 
 const router = express.Router();
 
@@ -65,7 +68,7 @@ router.get("/getStudent/:id", verifyToken, getStudent);
 router.put(
   "/updateStudentProfile",
   verifyToken,
-  studentFileUploader.single("img"),
+  studentCloudUploader.single("img"),
   updateStudentProfile
 );
 
@@ -79,7 +82,7 @@ router.get("/getTeacher/:id", verifyToken, getTeacher);
 router.put(
   "/updateTeacherProfile",
   verifyToken,
-  teacherFileUploader.single("img"),
+  teacherCloudUploader.single("img"),
   updateTeacherProfile
 );
 
@@ -96,7 +99,7 @@ router.get("/getAdmin/:id", verifyToken, getAdmin);
 router.put(
   "/updateAdminProfile",
   verifyToken,
-  adminFileUploader.single("img"),
+  adminCloudUploader.single("img"),
   updatedAdminProfile
 );
 

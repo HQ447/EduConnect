@@ -321,11 +321,7 @@ function Category() {
                   <div className="flex justify-center mb-4">
                     <div className="relative">
                       <img
-                        src={
-                          teacher.img
-                            ? `${domain}/${teacher.img}`
-                            : "../profile.png"
-                        }
+                        src={teacher.img ? teacher.img : "../profile.png"}
                         alt="Profile"
                         className="w-20 h-20 rounded-full object-cover border-4 border-blue-100 shadow-lg"
                       />

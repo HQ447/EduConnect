@@ -66,7 +66,7 @@ function StudentSidebar() {
         setprofile(student);
 
         if (student.img) {
-          setImgPreview(`${domain}/${student.img}`);
+          setImgPreview(student.img);
         }
       } else {
         console.log("error in fetching student profile");

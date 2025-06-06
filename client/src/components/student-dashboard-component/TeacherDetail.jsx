@@ -194,7 +194,7 @@ function TeacherDetail() {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <img
-              src={teacher?.img ? `${domain}/${teacher.img}` : "/profile.png"}
+              src={teacher?.img ? teacher.img : "/profile.png"}
               alt={teacher.teacherName}
               className="w-40 h-40 object-cover rounded-full border-4 border-indigo-500 shadow-md"
             />

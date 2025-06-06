@@ -99,7 +99,7 @@ function AdminSidebar() {
         setprofile(admin);
 
         if (admin.img) {
-          setImgPreview(`${domain}/${admin.img}`);
+          setImgPreview(admin.img);
         }
       } else {
         console.log("error in fetching admin profile");

@@ -231,11 +231,7 @@ function TeacherManagement() {
                 <div className="relative z-10 text-center mb-4">
                   <div className="relative inline-block">
                     <img
-                      src={
-                        teacher.img
-                          ? `${domain}/${teacher.img}`
-                          : "/default-profile.png"
-                      }
+                      src={teacher.img ? teacher.img : "/default-profile.png"}
                       alt="Profile"
                       className="w-20 h-20 mx-auto rounded-full object-cover border-4 border-white shadow-lg"
                     />

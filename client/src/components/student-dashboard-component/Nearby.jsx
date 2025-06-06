@@ -73,7 +73,7 @@ const Nearby = () => {
         background: white;
       ">
         <img
-          src="${teacher.img ? `${domain}/${teacher.img}` : "/profile.png"}"
+          src="${teacher.img ? teacher.img : "/profile.png"}"
           style="width: 100%; height: 100%; object-fit: cover;"
         />
       </div>

@@ -68,7 +68,7 @@ function Saved() {
               className="bg-white flex flex-col  border border-gray-200 shadow-sm hover:shadow-lg rounded-lg p-5 transition-shadow duration-300"
             >
               <img
-                src={teacher.img ? `${domain}/${teacher.img}` : "/profile.png"}
+                src={teacher.img ? teacher.img : "/profile.png"}
                 alt={teacher.teacherName}
                 className="rounded-full mx-auto h-30 w-30 object-cover mb-3"
               />

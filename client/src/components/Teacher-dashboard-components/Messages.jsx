@@ -95,11 +95,7 @@ function Messages() {
       <div className="flex justify-between items-center p-4 bg-white ">
         <div className="flex  gap-1 items-center">
           <img
-            src={
-              profile.img
-                ? `http://localhost:8000/${profile.img}`
-                : "../profile.png"
-            }
+            src={profile.img ? profile.img : "../profile.png"}
             alt="Profile"
             className="w-12 h-12 rounded-full object-cover border-4 border-blue-100 shadow-lg"
           />

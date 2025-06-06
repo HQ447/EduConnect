@@ -39,7 +39,7 @@ const AdminSettings = () => {
           });
 
           if (admin.img) {
-            setImgPreview(`${domain}/${admin.img}`);
+            setImgPreview(admin.img);
           }
         } else {
           setMessage("Failed to fetch admin profile");

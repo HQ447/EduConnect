@@ -67,7 +67,7 @@ const Profile = () => {
             });
           }
           if (teacher.img) {
-            setImgPreview(`${domain}/${teacher.img}`);
+            setImgPreview(teacher.img);
           }
         } else {
           setMessage("Failed to fetch teacher profile");

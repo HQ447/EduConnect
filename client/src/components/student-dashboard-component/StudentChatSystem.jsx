@@ -63,11 +63,7 @@ function StudentChatSystem() {
               onClick={() => navigate(`student-chat/${teacher._id}`)}
             >
               <img
-                src={
-                  teacher.img
-                    ? `http://localhost:8000/${teacher.img}`
-                    : "profile.png"
-                }
+                src={teacher.img ? teacher.img : "profile.png"}
                 alt={teacher.teacherName}
                 className="w-10 h-10 rounded-full object-cover"
               />
