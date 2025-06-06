@@ -3,7 +3,6 @@
 EduConnect is a full-stack web application that bridges the gap between students and local educators. It allows teachers to register and share their expertise, while students can discover and connect with nearby teachers based on location. Built with the MERN stack, EduConnect also features real-time chat, geolocation-based filtering, and an admin panel for user management.
 
 ## 🔧 Technical Overview
-![Screenshot (567)](https://github.com/user-attachments/assets/1492ffc2-79b2-4b79-9053-0645b6e48a36)
 
 EduConnect is a feature-rich MERN (MongoDB, Express.js, React.js, Node.js) stack application that connects students with local teachers for tutoring and mentoring.
 
