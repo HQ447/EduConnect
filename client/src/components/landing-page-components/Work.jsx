@@ -12,6 +12,8 @@ const Work = () => {
   const token = localStorage.getItem("studentToken");
 
   useEffect(() => {
+    if (!token) return;
+
     const fetchRecommendations = async () => {
       if (!token) {
         setError("Please log in to view recommendations");
@@ -48,11 +50,6 @@ const Work = () => {
 
     fetchRecommendations();
   }, [token]);
-
-  const handleBackToTeachers = () => {
-    // In a real app, this would use router navigation
-    console.log("Navigate back to teachers page");
-  };
 
   if (loading) {
     return (

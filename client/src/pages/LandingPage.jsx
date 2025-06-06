@@ -12,11 +12,13 @@ import Achivements from "../components/landing-page-components/Achivements";
 import FAQs from "../components/landing-page-components/FAQs";
 
 function LandingPage() {
+  const token = localStorage.getItem("studentToken");
   return (
     <div>
       <Navbar />
       <Home />
-      <Work />
+      {token && <Work />}
+
       <Features />
       <Categories />
 
