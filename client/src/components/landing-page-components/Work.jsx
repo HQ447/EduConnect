@@ -127,10 +127,7 @@ const Work = () => {
               We're working on finding the perfect teachers for you. Check back
               soon!
             </p>
-            <button
-              onClick={handleBackToTeachers}
-              className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-medium"
-            >
+            <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-medium">
               Browse All Teachers
             </button>
           </div>
