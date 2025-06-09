@@ -144,11 +144,7 @@ const Work = () => {
                   <div className="relative h-30 w-30 mx-auto rounded-full  overflow-hidden">
                     {teacher.img ? (
                       <img
-                        src={
-                          teacher.img
-                            ? `${domain}/${teacher.img}`
-                            : "../profile.png"
-                        }
+                        src={teacher.img ? teacher.img : "../profile.png"}
                         alt={teacher.teacherName}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
