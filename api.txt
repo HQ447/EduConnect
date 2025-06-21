@@ -1,0 +1,48 @@
+http://localhost:8000/tutor
+
+POST --> /registerStudent - {studentName, email, password, confirmPassword}
+POST --> /studentLogin - { email, password }
+POST --> /studentForgotPass - {email}
+POST --> /studentOtpVerification -{otp}
+POST --> /studentResetPass - {otp , password}
+GET  --> /getRegisteredTeachers 
+GET  --> /getSavedTeachers 
+POST --> /saveTeacher - - {studentId,teacherId,teacherName,img,email,contact,degree,subject,location,register,rating,isInstantTutor,}
+DELETE --> /removeSaveTeacher/:id
+GET  --> /getStudent/:id
+PUT --> /updateStudentProfile - { studentName, email, contact, address, currPassword, newPassword }
+POST --> /sendFeedback - - { studentId, teacherId, feedback }
+POST --> /rateTeacher/:teacherId - {rating}
+ 
+POST --> /registerTeacher - {teacherName, email, password, confirmPassword}
+POST --> /teacherLogin - { email, password }
+POST --> /teacherForgotPass - {email}
+POST --> /teacherOtpVerification {otp}
+POST --> /teacherResetPass - {otp , email}
+GET  --> /getTeacher/:id
+PUT  --> /updateTeacherProfile - {teacherName,email,subject,experience,contact,location,degree,isInstantTutor,latitude, longitude}
+GET  --> /getNearbyTeachers?latitude=${latitude}&longitude=${longitude}
+GET  --> /getFeedback/:teacherId
+
+
+POST --> /registerAdmin - { adminName, email, password, confirmPassword }
+POST --> /adminLogin - { email, password }
+POST --> /adminForgotPass - { email }
+POST --> /adminOtpVerification - {otp}
+POST --> /adminResetPass - {otp , password}
+GET  --> /getAdmin/:id
+PUT  --> /updateAdminProfile - { adminName, email, contact, address, currPassword, newPassword }
+GET  --> /getAllStudents
+GET  --> /getAllTeachers
+GET  --> /notRegisterTeachers
+DELETE --> /deleteStudent/:id
+DELETE --> /deleteTeacher/:id
+GET  --> /getAllCategories
+POST --> /addCategory - { name, description }
+DELETE --> /deleteCategory/:id
+POST --> /sendNotification - { senderId, senderType, receiverId, receiverType, title, message }
+GET  --> /getNotifications/:receiverId/:receiverType
+DELETE --> /removeNotification/:id
+
+POST --> /rateToRecommend - { teacherId, rating, studentId }
+GET  --> /getRecommendations

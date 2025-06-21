@@ -30,7 +30,7 @@ export const updatedAdminProfile = async (req, res) => {
       // Check if email already exists
       const existingAdmin = await Admin.findOne({
         email,
-        _id: { $ne: studentId },
+        _id: { $ne: adminId },
       });
       if (existingAdmin) {
         return res.status(400).json({
