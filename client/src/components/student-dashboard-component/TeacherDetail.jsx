@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-// Custom Star Rating Component
 const StarRating = ({ rating, onRatingChange, size = 24, editable = true }) => {
   const [hoverRating, setHoverRating] = useState(0);
 
