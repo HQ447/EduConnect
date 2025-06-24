@@ -112,7 +112,7 @@ function TeacherDetail() {
 
   const handleFeedbackSubmit = async () => {
     if (!newFeedback.trim()) {
-      alert("Please enter a feedback message");
+      alert("Please enter a feedback ");
       return;
     }
 
